@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student study pattern</title>
+    <style>
+        #ai{
+            width: calc(30vw + 30vh);
+            height: calc(20vw + 20vh);
+            background-color: aqua;
+            color: #000;
+            margin: auto;
+        }
+
+        #us{
+            width: calc(30vw + 30vh);
+            height: calc(10vw + 10vh);
+            background-color: rgb(195, 255, 0);
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="ai"></div>
+    <br>
+    <div id="us"></div>
+    <script>
+        window.onload=function(){
+       let ai = document.getElementById("ai");
+       ai.innerHTML = '<p>Enter the subject</p>';
+        var a = prompt("Enter the subject");
+        var b = prompt("you studied for what time interval\n(considering 1 interval = 15 minutes)")
+        var d=[0,0,0,0,0];
+        for(let i = 0; i < b; i++)
+        {
+        var c = prompt(" Enter your method of study per time interval\n 1) Audiobook\n 2) Textbook\n 3) Notes\n 4) Short Videos\n 5) Video Tutorials ");
+        
+        switch (c)
+        {
+            case '1' :++d[0];
+               break;
+            case '2' :++d[1];
+               break;
+            case '3' :++d[2];
+               break;
+
+            case '4' :++d[3];
+               break;
+            case '5' :++d[4];
+               break;
+            default :
+            i--;
+               c = prompt("Option dosen't exist!! PLEASE RE ENTER YOUR OPTION (ok)")
+        }
+   
+    }
+    function c0()
+    {
+        if(d[0]!=0)
+        {document.write("You went through Audiobook for "+ d[0] +" time interval<br>");
+     }
+    }
+    c0();
+    function c1()
+    {
+        if(d[1]!=0)
+        {document.write("You went through textook for "+ d[1] +" time interval<br>");}
+    }
+     c1();
+     function c2()
+    {
+        if(d[2]!=0)
+        {document.write("You went through Notes for "+ d[2] +" time interval<br>");}
+    }
+     c2();   
+     function c3()
+    {
+        if(d[3]!=0)
+        {document.write("You went through Short Videos for "+ d[3] +" time interval<br>");}
+    }
+     c3();   
+     function c4()
+    {
+        if(d[4]!=0)
+        {document.write("You went through Video Tutorials for "+ d[4] +" time interval<br>");}
+    }
+     c4();
+     let largest = d[0];
+    
+     function c5()
+     {
+     let p=0;
+        for (let j = 1; j < 5; j++)
+        {
+            if (d[j] > largest) 
+            {
+                largest = d[j];
+                p=j;
+              
+            }
+           
+        }
+        document.write("the largest number is " + largest + "  at position " + ++p + "<br>");
+    
+    if(p==1)
+      {
+        document.write("You have visited Audiobook most frequently");
+        document.write(" for the subject " + a);
+      }
+    else if(p==2)
+      {
+        document.write("You have visited Textbook most frequently");
+        document.write(" for the subject " + a);
+      }
+    else if(p==3)
+      {
+        document.write("You have visited Notes most frequently");
+        document.write(" for the subject " + a);
+      }
+    else if(p==4)
+      {
+        document.write("You have visited Short Videos most frequently");
+        document.write(" for the subject " + a);
+      }
+    else
+      {
+        document.write("You have visited Video Tutorials most frequently");
+        document.write(" for the subject " + a);
+      }
+
+    }
+    c5(); 
+
+}
+    </script>
+</body>
+</html>
