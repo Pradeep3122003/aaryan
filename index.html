@@ -4,33 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student study pattern</title>
-    <style>
-        #ai{
-            width: calc(30vw + 30vh);
-            height: calc(20vw + 20vh);
-            background-color: aqua;
-            color: #000;
-            margin: auto;
-        }
-
-        #us{
-            width: calc(30vw + 30vh);
-            height: calc(10vw + 10vh);
-            background-color: rgb(195, 255, 0);
-            margin: auto;
-        }
-    </style>
 </head>
 <body>
-    <div id="ai"></div>
-    <br>
-    <div id="us"></div>
     <script>
-        window.onload=function(){
-       let ai = document.getElementById("ai");
-       ai.innerHTML = '<p>Enter the subject</p>';
+       var z = prompt("How many subjects did you learn in a day");
+       for(i=0;i<z;i++)
+       {
         var a = prompt("Enter the subject");
-        var b = prompt("you studied for what time interval\n(considering 1 interval = 15 minutes)")
+        var b = prompt("you studied for what time interval (considering 1 time intercal is 15 minutes)\n");
         var d=[0,0,0,0,0];
         for(let i = 0; i < b; i++)
         {
@@ -55,35 +36,36 @@
         }
    
     }
+    document.write("<h1><b><i><u>subject "+ a + " </b></i></u></h1> <br>");
     function c0()
     {
         if(d[0]!=0)
-        {document.write("You went through Audiobook for "+ d[0] +" time interval<br>");
+        {document.write("<h2>You went through Audiobook for "+ d[0] +" time interval</h2><br>");
      }
     }
     c0();
     function c1()
     {
         if(d[1]!=0)
-        {document.write("You went through textook for "+ d[1] +" time interval<br>");}
+        {document.write("<h2>You went through textook for "+ d[1] +" time interval</h2><br>");}
     }
      c1();
      function c2()
     {
         if(d[2]!=0)
-        {document.write("You went through Notes for "+ d[2] +" time interval<br>");}
+        {document.write("<h2>You went through Notes for "+ d[2] +" time interval</h2><br>");}
     }
      c2();   
      function c3()
     {
         if(d[3]!=0)
-        {document.write("You went through Short Videos for "+ d[3] +" time interval<br>");}
+        {document.write("<h2>You went through Short Videos for "+ d[3] +" time interval</h2><br>");}
     }
      c3();   
      function c4()
     {
         if(d[4]!=0)
-        {document.write("You went through Video Tutorials for "+ d[4] +" time interval<br>");}
+        {document.write("<h2>You went through Video Tutorials for "+ d[4] +" time interval</h2><br>");}
     }
      c4();
      let largest = d[0];
@@ -101,38 +83,38 @@
             }
            
         }
-        document.write("the largest number is " + largest + "  at position " + ++p + "<br>");
+        document.write( "<h2>the largest number is " + largest + "  at position " + ++p + "</h2><br>");
     
     if(p==1)
       {
-        document.write("You have visited Audiobook most frequently");
-        document.write(" for the subject " + a);
+        document.write("<h2>You have visited Audiobook most frequently");
+        document.write(" for the subject " + a + "</h2><br>");
       }
     else if(p==2)
       {
-        document.write("You have visited Textbook most frequently");
-        document.write(" for the subject " + a);
+        document.write("<h2>You have visited Textbook most frequently");
+        document.write(" for the subject " + a + "</h2><br>");
       }
     else if(p==3)
       {
-        document.write("You have visited Notes most frequently");
-        document.write(" for the subject " + a);
+        document.write("<h2>You have visited Notes most frequently");
+        document.write(" for the subject " + a + "</h2><br>");
       }
     else if(p==4)
       {
-        document.write("You have visited Short Videos most frequently");
-        document.write(" for the subject " + a);
+        document.write("<h2>You have visited Short Videos most frequently");
+        document.write(" for the subject " + a + "</h2><br>");
       }
     else
       {
-        document.write("You have visited Video Tutorials most frequently");
-        document.write(" for the subject " + a);
+        document.write("<h2>You have visited Video Tutorials most frequently");
+        document.write(" for the subject " + a + "</h2><br>");
       }
 
     }
     c5(); 
-
-}
+       }
+    
     </script>
 </body>
 </html>
